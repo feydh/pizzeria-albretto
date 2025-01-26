@@ -6,6 +6,8 @@ const app = express();
 const port = 3005;
 const cors = require('cors');
 
+const uri = process.env.MONGODB_URI;
+
 app.listen(port, () => {
     console.log(`http://localhost:${port}`);
 });
