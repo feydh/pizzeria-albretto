@@ -1,6 +1,8 @@
 // Запросы к серверу
+
+
 import axios from "axios";
-axios.defaults.baseURL = 'http://localhost:3005';
+axios.defaults.baseURL = 'https://pizzeria-albretto.vercel.app';
 
 // Работа с датой
 import dayjs from 'dayjs';

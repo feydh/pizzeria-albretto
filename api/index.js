@@ -3,24 +3,19 @@ const express = require('express');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const app = express();
-const port = 3005;
 const cors = require('cors');
 
 const uri = process.env.MONGODB_URI;
 
-app.listen(port, () => {
-    console.log(`http://localhost:${port}`);
-});
-
 // Настройка CORSЯ
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+app.use(cors({ origin: 'https://feydh.github.io/pizzeria-albretto/', credentials: true }));
 
 // Настройка POST-запроса — JSON
 
 app.use(express.json());
 
 // Настройка БД
-mongoose.connect('mongodb://127.0.0.1:27017/pizzeria', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const userSchema = new mongoose.Schema({
     username: String,
@@ -79,7 +74,7 @@ app.use(session({
     secret: 'none',
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false }
+    cookie: { secure: true }
 }));
 
 app.get(`/products`, async function (req, res) {

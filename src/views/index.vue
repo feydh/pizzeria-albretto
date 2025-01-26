@@ -3,7 +3,7 @@ import '../css/index.css';
 import '../js/input.js';
 import '../js/scroll.js';
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:3005";
+axios.defaults.baseURL = 'https://pizzeria-albretto.vercel.app'
 
 export default {
     data() {
