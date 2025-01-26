@@ -1,0 +1,587 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: junegull;
+    src: url(../assets/font/junegull.otf);
+}
+
+.d-n-phone {
+    display: none;
+}
+.meet {
+    display: grid;
+    margin: 50px 0px 40px 0px;
+    align-items: end;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 2em;
+    /* flex-wrap: wrap; */
+}
+
+.logo img {
+    max-width: 430px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* Добавляем перенос элементов на новую строку */
+}
+
+button {
+    display: flex;
+    height: 48px;
+    background-color: white;
+    padding: 10px 40px;
+    font-size: 18px;
+    border-radius: 100px;
+    border: 2px solid #FF9957;
+    color: #6F6F6F;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+    font-family: junegull;
+}
+
+button:hover {
+    background-color: #FF9957;
+    border: 2px solid #FF9957;
+    color: #ffffff;
+    transition: all 0.3s ease 0s;
+}
+
+.menu {
+    position: sticky;
+    top: 0;
+    padding: 10px 0px;
+    background-color: #ffffff;
+    filter: drop-shadow(rgba(0, 0, 0, 0.206) 0px 0px 4px);
+    z-index: 1;
+}
+
+.menu .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-list {
+    display: flex;
+    gap: 35px;
+    justify-items: center;
+}
+
+.menu-li {
+    color: #000;
+    font-family: junegull;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.menu-li:hover {
+    color: #FF9957;
+    transition: all 0.3s ease 0s;
+}
+
+.basket {
+    width: 42px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.basket:hover {
+    width: 45px;
+    transition: all 0.3s ease 0s;
+}
+
+.basket-phone {
+    display: none;
+}
+
+h3 {
+    margin: 35px 0px 10px 0px;
+    font-size: 24px;
+}
+
+.raiting {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+    margin: 20px 0px 0px 0px;
+}
+
+.card-raiting {
+    display: flex;
+    background-color: white;
+    border-radius: 18px;
+    border: 2px solid #FF9957;
+    padding: 10px 30px 10px 10px;
+    gap: 10px;
+    align-items: center;
+}
+
+.card-raiting img {
+    border-radius: 13px;
+}
+
+.raiting-div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.raiting-name {
+    font-size: 16px;
+}
+
+.raiting-raiting {
+    display: flex;
+    align-items: center;
+    color: #FF9957;
+}
+
+.raiting-price {
+    color: #6F6F6F;
+}
+
+.card-raiting p img {
+    margin: 0px 5px 0px 0px;
+}
+
+@media (max-width:1300px) {
+    .raiting {
+
+        overflow-y: auto;
+        /* Включаем вертикальную прокрутку */
+        max-height: 300px;
+        /* Пример значения для максимальной высоты */
+    }
+
+    .raiting::-webkit-scrollbar {
+        display: none;
+        /* Скрыть полосу прокрутки */
+    }
+}
+
+h2 {
+    font-size: 32px;
+    margin: 30px 0px;
+}
+
+.menu-assortiment {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 45px;
+
+}
+
+.menu-card {
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 23px;
+    transition: all 0.3s ease 0s;
+
+}
+.out-of-stock {
+    opacity: 0.5; 
+    pointer-events: none; 
+}
+
+button:disabled {
+    background-color: #ccc;
+}
+.menu-card:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    /* Добавим тень для выделения карточки */
+}
+
+.menu-card img {
+    border-radius: 23px;
+    width: 100%;
+    height: auto;
+}
+
+.product-info {}
+
+.product-name {
+    font-size: 20px;
+    margin: 15px 0px 8px 0px;
+}
+
+.menu-card p {}
+
+.menu-structure {
+    color: #6F6F6F;
+    font-size: 16px;
+}
+
+.product-footer {
+    margin: 25px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.price-weight {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 0px;
+}
+
+.product-price {
+    font-size: 18px;
+    font-family: 'junegull';
+}
+
+.product-weight {
+    font-size: 16px;
+    color: #6F6F6F;
+    margin: 8px 0px 0px 0px;
+}
+
+.product-button {
+    /* color: black; */
+    padding: 10px 30px;
+    margin: 10px 0px 0px 0px;
+}
+
+.phone-product-button {
+    display: none;
+}
+
+.logo-footer {
+    margin: 100px 0px 0px 0px;
+}
+
+.blackout {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #0000004f;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transition: all 0.3s ease 0s;
+    /* Добавим тень для выделения карточки */
+    display: flex;
+    /* Добавляем Flexbox */
+    justify-content: center;
+    /* Центрируем по горизонтали */
+    align-items: center;
+    /* Центрируем по вертикали */
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+.modal-window {
+    width: 600px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 35px;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.title-login-or-register {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    margin: 0px 0px 20px 0px;
+}
+
+.title-login-or-register img {
+    width: 60px;
+    cursor: pointer;
+}
+
+.input-shell {
+    position: relative;
+    margin: 0 0 40px 0;
+}
+
+.input-shell input {
+    border-radius: 10px;
+    font-size: 18px;
+    border: 2px solid #000000;
+    padding: 20px 25px;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+    background-color: #fff;
+}
+
+.input-shell input:focus {
+    border-color: #FF9957;
+    color: #FF9957;
+    transition: all 0.3s ease;
+}
+
+.input-shell label {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: 16px;
+    color: #6F6F6F;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: white;
+    padding: 4px 4px;
+}
+
+.input-shell input:focus+label,
+.input-shell input:not(:placeholder-shown)+label {
+    top: -23px;
+    left: 0px;
+    font-size: 14px;
+    color: #FF9957;
+    padding: 2px 4px;
+}
+
+/* Когда поле уже имеет значение при загрузке страницы */
+.input-shell input:not(:focus):not(:placeholder-shown)+label {
+    top: -23px;
+    left: 0px;
+    font-size: 14px;
+    color: #6F6F6F;
+    padding: 2px 4px;
+}
+
+.input-shell input:hover {
+    border-color: #FF9957;
+    transition: all 0.3s ease;
+}
+
+.input-shell input:disabled+label {
+    color: #000000;
+}
+
+
+.not-active-button {
+    margin: 10px;
+    border: none;
+}
+
+.modal-window-product {
+    min-width: 800px;
+    display: flex;
+    gap: 30px;
+}
+
+.modal-window-product img {
+    max-width: 400px;
+}
+
+.info_product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-wrap: break-word;
+}
+.info_product button{
+    /* width: 100%; */
+}
+
+
+.info_product h3 {
+    margin: 0px;
+}
+
+.info_product span {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 24px;
+    word-wrap: break-word;
+}
+
+.info_product span span {
+    color: #FF9957;
+}
+
+.info_product span > .menu-structure {
+    color: #000;
+    font-size: 20px;
+}
+
+.modal-window-product-footer button{
+    width: 100%;
+}
+
+.info_product span > .menu-structure ~ .menu-structure {
+    color: #6F6F6F;
+    font-size: 16px;
+}
+@media (max-width:767px) {
+    .meet {
+        margin: 50px 0px 30px 0px;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        justify-items: center;
+        gap: 10px;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+
+    .menu {
+        padding: 23px 0px;
+    }
+
+    .menu {
+
+        overflow-y: auto;
+        /* Включаем вертикальную прокрутку */
+        max-height: 300px;
+        /* Пример значения для максимальной высоты */
+    }
+
+    .menu::-webkit-scrollbar {
+        display: none;
+        /* Скрыть полосу прокрутки */
+    }
+
+
+    .basket-phone {
+        display: block;
+        position: sticky;
+        width: 70px;
+        top: 90%;
+        left: 18px;
+        border-radius: 10px;
+        z-index: 1;
+    }
+
+    .container-menu {
+        transform: translate(0px, -70px);
+    }
+
+    .menu-assortiment {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .menu-card {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+
+    .menu-card img {
+        width: 40%;
+        /* Ширина изображения на мобильных устройствах */
+        height: auto;
+        /* Высота пропорциональна ширине */
+    }
+
+    .product-name {
+        margin: 20px 0px 10px 0px;
+    }
+
+    .product-info {
+        width: 100%;
+        height: 100%;
+        /* padding: 5px; */
+        /* Отступы для блока с информацией */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .phone-product-button {
+        display: block;
+    }
+
+    .modal-window {
+        width: 100%;
+        height: 100%;
+    }
+
+    form {
+        height: 100%;
+        justify-content: center;
+    }
+    .modal-window-product {
+        min-width: 100%; 
+        flex-direction: column; 
+        gap: 20px; 
+    }
+
+
+    .info_product {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        word-wrap: break-word;
+        font-size: 16px; 
+        height: 100%; 
+    }
+
+    .info_product h3 {
+        font-size: 24px; 
+        margin-bottom: 10px; 
+    }
+
+    .info_product span {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        word-wrap: break-word;
+    }
+
+    .info_product span > .menu-structure {
+        color: #000;
+        font-size: 16px; /* Уменьшаем размер шрифта для мобильных */
+    }
+
+    .info_product span > .menu-structure ~ .menu-structure {
+        color: #6F6F6F;
+        font-size: 14px; /* Еще больше уменьшаем шрифт для мобильной версии */
+    }
+
+    .info_product span span {
+        color: #FF9957;
+    }
+
+    .modal-window-product-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0
+    }
+
+   
+    .d-n-phone {
+        display: block;
+    }
+}

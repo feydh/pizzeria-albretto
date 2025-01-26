@@ -1,0 +1,179 @@
+@font-face {
+    font-family: junegull; 
+    src: url(../assets/font/junegull.otf); 
+    }
+    
+    .header {
+    width: 100%;
+    z-index: 50;
+    padding: 3px 0px;
+}
+
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(rgba(0, 0, 0, 0.399) 0px 0px 4px);
+    z-index: 3;
+}
+
+
+.container {
+    max-width: 1270px;
+    margin: 0px auto;
+    padding: 0px 18px;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    align-items:center;
+}
+
+.header-body {
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+
+}
+.header-number {
+    z-index: 3;
+}
+
+.header-number p, .header-number p span{
+    font-size: 16px;
+    font-family: junegull;
+}
+
+.header-number p span {
+    color:#FF9957;
+    margin: 0px 0px 0px 15px;
+}
+
+.header-logo {
+    z-index: 3;
+}
+
+
+.header-burger {
+    display: none;
+}
+
+
+.header-list {
+    display: flex;
+    position: relative;
+    z-index: 3;
+}
+
+.header-list li {
+    list-style: none;
+    margin: 0px 0px 0px 46px;
+}
+
+.header-link {
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: junegull;
+}
+
+
+
+@media (max-width:767px) {
+    header .container {
+        display: block;
+    }
+    
+    .header-body {
+        justify-content: space-between;
+    }
+    body.lock{
+        overflow: hidden;
+    }
+    .header-burger {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 29px;
+        z-index: 3;
+    }
+
+    .header-burger span {
+        position: absolute;
+        background-color: #FF9957;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        top: 12px;
+        border-radius: 50px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header-burger::before,
+    .header-burger::after {
+        content: '';
+        background-color: #FF9957;
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        left: 0;
+        border-radius: 50px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header-burger::before {
+        top: 0;
+    }
+
+    .header-burger::after {
+        bottom: 0;
+    }
+
+    .header-burger.active:before {
+    transform:rotate(45deg);
+    top: 13px;
+}
+
+.header-burger.active:after {
+    transform:rotate(-45deg);
+    bottom:10px;
+}
+.header-burger.active span {
+    transform: scale(0);
+}
+
+    .header-menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: #FF9957;
+        padding: 80px 18px 20px 18px;
+        transition: all 0.3s ease 0s;
+        z-index: 2;
+    }
+
+    .header-menu.active {
+        top: 0;
+    }
+    .header-list {
+        display: block;
+    }
+    .header-list li{
+        margin: 0px 0px 30px 0px;
+    }
+    .header-link {
+    color: black;
+    font-size: 50px;
+    text-decoration: none;
+}
+}

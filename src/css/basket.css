@@ -1,0 +1,424 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: junegull;
+    src: url(../assets/font/junegull.otf);
+}
+
+h1 {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    margin: 50px 0px 0px 0px;
+}
+
+h1 img {
+    width: 78px;
+    border: none;
+    margin: 0px 25px 0px 0px;
+    cursor: pointer;
+}
+
+.basket-container {
+    display: grid;
+    grid-template-columns: 2;
+    gap: 15px;
+}
+
+.card-container {
+    grid-column: 1/3;
+
+}
+.card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.card-img {
+    width: 120px;
+    border-radius: 20px;
+    margin: 0px 5px 0px 0px;
+}
+
+.card-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+
+.product-info {
+    text-align: left;
+}
+
+.product-info .product-name-basket {
+    font-size: 20px;
+    margin: 0px 0px 15px 0px;
+}
+
+.product-info p {
+   color: #6F6F6F;
+}
+
+
+.card-interaction {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 55px;
+    flex-wrap: wrap;
+}
+
+.card-interaction button{
+    width: 50px;
+    padding: 0;
+    font-size: 30px;
+    color: #FF9957;
+}
+
+.card-interaction button:hover{
+    color: white;
+}
+
+.card-interaction img{
+    width: 35px;
+    cursor: pointer;
+}
+
+.card-interaction p{
+    font-size: 20px;
+    color:#FF9957;
+    font-family: junegull;
+}
+
+
+.card-quantity {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-quantity span{
+    font-size: 20px;
+    font-family: junegull;
+}
+
+.pay {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    grid-column: 3/4;
+    display: flex;
+    border-radius: 15px;
+    border: 3px solid #FF9957;
+    padding: 35px;
+    height: 225px;
+    /* align-items: center; */
+    flex-direction: column;
+    
+}
+
+.pay div {
+    font-size: 24px;
+}
+
+.order-amount {
+    font-size: 32px;
+    color: #FF9957;
+    margin: 15px 0px 15px 0px;
+    font-family: junegull;
+}
+
+.delivery-time {
+    font-size: 16px;
+    margin: 0px 0px 10px 0px;
+}
+.delivery-time span{
+    color: #FF9957;
+    font-size: 18px;
+}
+.recommendations-title {
+    margin: 50px 0px 0px 0px;
+}
+
+.recommendations {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+    margin: 20px 0px 0px 0px;
+}
+
+.card-recommendations {
+    display: flex;
+    background-color: white;
+    border-radius: 18px;
+    border: 2px solid #FF9957;
+    padding: 10px 10px 10px 10px;
+    gap: 10px;
+    align-items: center;
+}
+
+.card-recommendations img {
+    border-radius: 13px;
+}
+
+.recommendations-div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.recommendations-name {
+    font-size: 16px;
+}
+
+.recommendations-price{
+    color: #6F6F6F;
+    padding: 0px 30px;
+    font-size: 16px;
+}
+
+.card-raiting p img {
+    margin: 0px 5px 0px 0px;
+}
+
+.blackout {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #0000004f;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transition: all 0.3s ease 0s; /* Добавим тень для выделения карточки */
+    display: flex; /* Добавляем Flexbox */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+}
+
+body.lock{
+    overflow: hidden;
+}
+
+.modal-window-basket {
+    width: 600px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 35px;
+    display: flex;
+    flex-direction: column;
+}
+.modal-window-basket button{
+    width: 100%;
+    
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.title-login-or-register {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    margin: 0px 0px 20px 0px;
+}
+
+.title-login-or-register img{
+    width: 60px;
+    cursor: pointer;
+}
+
+.input-shell {
+    position: relative;
+    margin: 0px 0px 40px 0px;
+}
+
+.input-shell input{ 
+    border-radius: 10px;
+    font-size: 18px;
+    border: 2px solid #000000;
+    padding: 20px 25px ; /* Add padding-bottom to make space for the label */
+    transition: all 0.3s ease 0s;
+    width: 100%;
+}
+
+.input-shell input:focus{ 
+    border: 1px solid #FF9957;
+    color:#FF9957;
+    transition: all 0.3s ease 0s;
+}
+
+.input-shell label {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: 16px;
+    color: #6F6F6F;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: white;
+    padding: 4px 4px;
+}
+
+.input-shell input:focus + label,
+.input-shell input:not(:placeholder-shown) + label {
+    top: -23px; /* Move label above the border */
+    left: 0px;
+    font-size: 14px;
+    color: #FF9957;
+    padding: 2px 4px;
+}
+
+
+.not-active-button {
+    margin: 10px;
+    border: none;
+}
+
+select {
+    border-radius: 10px;
+    font-size: 18px;
+    border: 2px solid #000000;
+    padding: 20px 25px ; /* Add padding-bottom to make space for the label */
+    transition: all 0.3s ease 0s;
+    width: 100%;
+    margin: 0px 0px 40px 0px;
+}
+
+.login-or-register button {
+    width: 100%;
+}
+@media (max-width:1300px) {
+    .recommendations {
+
+        overflow-y: auto;
+        /* Включаем вертикальную прокрутку */
+        max-height: 300px;
+        /* Пример значения для максимальной высоты */
+    }
+
+    .recommendations::-webkit-scrollbar {
+        display: none;
+        /* Скрыть полосу прокрутки */
+    }
+}
+
+@media (max-width:767px) {
+    h1 {
+        font-size: 24px;
+        margin: 20px 0px 0px 0px;
+    }
+
+    h1 img {
+        margin: 0px 15px 0px 0px;
+    }
+
+    .basket-container {
+        grid-template-columns: 1fr;
+    }
+    .card-container {
+        flex-direction: column;
+        gap: 0px;
+        grid-column: 1/4;
+    }
+    .card-img{
+        width: 40%;
+        margin: 0px;
+    }
+    .card-info {
+        /* margin: 0px; */
+    }
+    .product-info {
+    }
+    .card-interaction {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: start;
+        margin: 10px 0px 0px 0px;
+        gap: 15px;
+    }
+
+    .card-interaction p{
+        order: -1;
+        grid-column: 1 / -1; /* Этот блок занимает всю ширину */
+    }
+    .card-quantity {
+        margin: 0px 10px 0px 0px;
+    }
+
+    .card-quantity button {
+        width: 35px;
+        height: 35px;
+    font-size: 20px;
+    }
+
+    .card-quantity img{
+        width: 30px;
+    }
+    .pay {
+        position: fixed; 
+        display: flex;
+        left: 0; 
+        top: 83%; 
+        bottom: 0; 
+        width: 100%; 
+        grid-column: 1 / 4; 
+        border: none; 
+        padding: 15px; 
+        height: auto; 
+        background-color:white;
+        justify-content: center;
+        text-align:center;
+        filter: drop-shadow(rgba(0, 0, 0, 0.158) 0px 0px 4px);
+        border-radius: 0px;
+    }
+    .pay .div-info-pay div{
+        display: flex;
+        align-items:center;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .pay span{
+        font-size: 20px;
+    }
+    
+    .order-amount {
+        font-size: 24px;
+    }
+    .delivery-time {
+
+    }
+    
+    .pay button{
+        height: auto;
+        width: 100%;
+    }
+
+    .recommendations {
+        margin: 20px 0px 100px 0px;
+    }
+    .span-phone {
+        display: block;
+        width: 1px;
+        height: 1px;
+    }
+    .modal-window-basket {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+    .modal-window-basket h3{
+        margin: 0px 0px 40px 0px;
+    }
+ }
